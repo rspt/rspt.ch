@@ -2,11 +2,182 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>rspt - Julien Grünhagel</title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    rspt
+    <title>rspt - Julien Grünhagel</title>
+
+    <style media="screen">
+
+      :root {
+        --text-color-selection: red;
+      }
+
+      body {
+        margin: 25px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+      }
+
+      @media (min-width: 500px) {
+        main {
+          padding-top: 50px;
+        }
+      }
+
+      h1 {
+        font-weight: 900;
+      }
+
+      article {
+        max-width: 500px;
+      }
+
+      p {
+        line-height: 1.5rem;
+      }
+
+      .system-sans-serif { font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
+               'avenir next', avenir, /* MacOS and iOS */
+               'Segoe UI', /* Windows */
+               'lucida grande', /* Older MacOS */
+               'helvetica neue', helvetica, /* Older MacOS */
+               'Fira Sans', /* Firefox OS */
+               roboto, noto, /* Google stuff */
+               'Droid Sans', /* Old Google stuff */
+               cantarell, oxygen, ubuntu, /* Linux stuff */
+               'franklin gothic medium', 'century gothic', /* Windows stuff */
+               'Liberation Sans', /* Linux */
+               sans-serif; /* Everything else */ }
+
+         @keyframes rotate {
+           from {
+             transform: rotate(0deg);
+           }
+
+           to {
+             transform: rotate(360deg);
+           }
+         }
+
+         @keyframes rainbow {
+            0% {color: #ff0000;}
+            10% {color: #ff8000;}
+            20% {color: #ffff00;}
+            30% {color: #80ff00;}
+            40% {color: #00ff00;}
+            50% {color: #00ff80;}
+            60% {color: #00ffff;}
+            70% {color: #0080ff;}
+            80% {color: #0000ff;}
+            90% {color: #8000ff;}
+            100% {color: #ff0080;}
+          }
+
+         @keyframes rainbow-svg {
+            0% {stroke: #ff0000;}
+            10% {stroke: #ff8000;}
+            20% {stroke: #ffff00;}
+            30% {stroke: #80ff00;}
+            40% {stroke: #00ff00;}
+            50% {stroke: #00ff80;}
+            60% {stroke: #00ffff;}
+            70% {stroke: #0080ff;}
+            80% {stroke: #0000ff;}
+            90% {stroke: #8000ff;}
+            100% {stroke: #ff0080;}
+          }
+
+          .logo line,
+          .logo polygon {
+            animation-name: rainbow-svg;
+            animation-iteration-count: infinite;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+          }
+
+        .logo {
+          max-width: 50px;
+        }
+
+        .logo:hover,
+        .logo:focus,
+        .logo:active {
+          animation-name: rotate;
+          animation-iteration-count: infinite;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+        }
+
+        a {
+          color: #0080ff;
+          text-decoration: none;
+        }
+
+        a:active,
+        a:hover,
+        a:focus {
+          animation-name: rainbow;
+          animation-iteration-count: infinite;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+        }
+    </style>
+  </head>
+  <body class="system-sans-serif">
+
+    <main>
+
+      <header>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 297.4 305" style="enable-background:new 0 0 297.4 305;" xml:space="preserve" class="logo">
+          <style type="text/css">
+          	.st0{fill:none;stroke:#000000;stroke-width:7;stroke-miterlimit:10;}
+          </style>
+          <g>
+          	<g>
+          		<line class="st0" x1="178.8" y1="100.4" x2="63.3" y2="100.4"/>
+          		<polygon class="st0" points="34.4,51.7 63.3,100.4 34.4,149.1 5.6,100.4 		"/>
+          	</g>
+          	<g>
+          		<line class="st0" x1="118.6" y1="100.4" x2="60.9" y2="200.5"/>
+          		<polygon class="st0" points="4.2,201.1 60.9,200.5 88.6,249.8 32,250.4 		"/>
+          	</g>
+          	<g>
+          		<line class="st0" x1="88.5" y1="152.5" x2="146.3" y2="252.5"/>
+          		<polygon class="st0" points="118.5,301.9 146.3,252.5 202.9,253.2 175.1,302.5 		"/>
+          	</g>
+          	<g>
+          		<line class="st0" x1="118.6" y1="204.6" x2="234.1" y2="204.6"/>
+          		<polygon class="st0" points="263,253.3 234.1,204.6 263,155.9 291.8,204.6 		"/>
+          	</g>
+          	<g>
+          		<line class="st0" x1="178.8" y1="204.6" x2="236.5" y2="104.6"/>
+          		<polygon class="st0" points="293.1,104 236.5,104.6 208.8,55.2 265.4,54.6 		"/>
+          	</g>
+          	<g>
+          		<line class="st0" x1="208.8" y1="152.5" x2="151.1" y2="52.5"/>
+          		<polygon class="st0" points="178.9,3.1 151.1,52.5 94.5,51.9 122.2,2.5 		"/>
+          	</g>
+          </g>
+        </svg>
+
+        <h1>rspt</h1>
+      </header>
+
+      <article>
+        <div>
+          <p>Hi! My name is Julien Grünhagel.</p>
+          <p>I am the founder of <a href="http://laruche.io/">laruche</a>, a Swiss web agency specialized in IT consulting, cloud solutions &amp; web development.</p>
+          <p>I've got a lot of hobby, specially Glitch &amp; Generative art. You can find my creations on my <a href="https://www.instagram.com/rspt8201/" class="link">Instagram</a> alongside some inspirations on <a href="http://rspt8201.tumblr.com" rel="external" class="link">Tumblr</a>.
+          If you're curious about what I build in my spare time, go check my <a href="https://github.com/rspt/" rel="external" class="link">GitHub</a>!</p>
+          <p>If you've got any questions, feel free to contact me on <a href="https://twitter.com/rspt8201">Twitter</a> or send me an <a href="mailto:julien@rspt.ch" class="link">email</a>.</p>
+          <p style="color: gray;">Browse in peace! 🜲</p>
+        </div>
+      </article>
+
+    </main>
 
   </body>
 </html>
