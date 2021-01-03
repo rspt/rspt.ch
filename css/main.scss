@@ -2,9 +2,32 @@
 ---
 
 $color-gray: gray;
+$color-visited: #cc85d8;
+
+a:visited {
+  color: $color-visited;
+}
 
 .fuck-social-media {
   font-style: italic;
   font-size: small;
   color: $color-gray;
+}
+
+///
+
+.gallery {
+  max-width: 500px;
+}
+
+.gallery img {
+  box-shadow: 0 0 15px 5px lightgrey;
+  margin-bottom: 10rem;
+}
+
+.gallery .section-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  color: gray;
 }
